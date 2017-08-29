@@ -10,44 +10,80 @@ declare(strict_types = 1);
 
 namespace Behavioral\Iterator;
 
+/**
+ * Class Iterator
+ *
+ * @package Behavioral\Iterator
+ */
 class Iterator implements InterfaceIterator
 {
 
+    /**
+     * @var array
+     */
     protected $items = [];
 
-    public $position = 0;
+    /**
+     * @var int
+     */
+    protected $position = 0;
 
-    public function __construct($items)
+    /**
+     * Iterator constructor.
+     *
+     * @param array $items
+     */
+    public function __construct(array $items)
     {
         $this->items = $items;
     }
 
-    public function getItems()
+    /**
+     * @return array
+     */
+    public function getItems(): array
     {
         return $this->items;
     }
 
-    public function getItem($item)
+    /**
+     * @param int $item
+     *
+     * @return Item
+     */
+    public function getItem(int $item): Item
     {
         return $this->items[$item];
     }
 
-    public function getPosition()
+    /**
+     * @return int
+     */
+    public function getPosition(): int
     {
         return $this->position;
     }
 
-    public function setPosition($position)
+    /**
+     * @param int $position
+     */
+    public function setPosition(int $position)
     {
         $this->position = $position;
     }
 
-    public function hasNext()
+    /**
+     * @return bool
+     */
+    public function hasNext(): bool
     {
         return ($this->getPosition() >= count($this->getItems()) || count($this->getItems()) == 0) ? false : true;
     }
 
-    public function next()
+    /**
+     * @return Item
+     */
+    public function next(): Item
     {
         $item = $this->getItem($this->getPosition());
         $this->setPosition($this->getPosition() + 1);
