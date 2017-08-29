@@ -10,10 +10,21 @@ declare(strict_types = 1);
 
 namespace Behavioral\Iterator;
 
+/**
+ * Interface InterfaceIterator
+ *
+ * @package Behavioral\Iterator
+ */
 interface InterfaceIterator
 {
 
+    /**
+     * @return mixed
+     */
     public function hasNext();
 
+    /**
+     * @return mixed
+     */
     public function next();
 }
