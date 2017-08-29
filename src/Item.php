@@ -10,15 +10,36 @@ declare(strict_types = 1);
 
 namespace Behavioral\Iterator;
 
+/**
+ * Class Item
+ *
+ * @package Behavioral\Iterator
+ */
 class Item
 {
 
+    /**
+     * @var
+     */
     protected $price;
 
+    /**
+     * @var
+     */
     protected $name;
 
+    /**
+     * @var string
+     */
     protected $description;
 
+    /**
+     * Item constructor.
+     *
+     * @param        $name
+     * @param        $price
+     * @param string $description
+     */
     public function __construct($name, $price, $description = '')
     {
         $this->name        = $name;
@@ -26,22 +47,31 @@ class Item
         $this->description = $description;
     }
 
-    public function printItem()
+    public function printItem(): void
     {
         print $this->getName() . ' ' . $this->getPrice() . ' руб. ' . $this->getDescription() . "\n";
     }
 
-    public function getPrice()
+    /**
+     * @return int
+     */
+    public function getPrice(): int
     {
         return $this->price;
     }
 
-    public function getName()
+    /**
+     * @return string
+     */
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getDescription()
+    /**
+     * @return string
+     */
+    public function getDescription(): string
     {
         return $this->description;
     }
