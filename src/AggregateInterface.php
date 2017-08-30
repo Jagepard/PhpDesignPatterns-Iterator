@@ -11,11 +11,11 @@ declare(strict_types = 1);
 namespace Behavioral\Iterator;
 
 /**
- * Interface InterfaceAggregate
+ * Interface AggregateInterface
  *
  * @package Behavioral\Iterator
  */
-interface InterfaceAggregate
+interface AggregateInterface
 {
 
     /**
