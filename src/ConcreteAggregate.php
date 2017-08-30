@@ -15,7 +15,7 @@ namespace Behavioral\Iterator;
  *
  * @package Behavioral\Iterator
  */
-class ConcreteAggregate implements InterfaceAggregate
+class ConcreteAggregate implements AggregateInterface
 {
 
     /**
