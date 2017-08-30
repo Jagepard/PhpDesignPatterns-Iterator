@@ -19,24 +19,24 @@ class Client
 {
 
     /**
-     * @var InterfaceAggregate
+     * @var AggregateInterface
      */
     protected $aggregate;
 
     /**
      * Client constructor.
      *
-     * @param InterfaceAggregate $aggregate
+     * @param AggregateInterface $aggregate
      */
-    public function __construct(InterfaceAggregate $aggregate)
+    public function __construct(AggregateInterface $aggregate)
     {
         $this->aggregate = $aggregate;
     }
 
     /**
-     * @return InterfaceAggregate
+     * @return AggregateInterface
      */
-    public function getAggregate(): InterfaceAggregate
+    public function getAggregate(): AggregateInterface
     {
         return $this->aggregate;
     }
