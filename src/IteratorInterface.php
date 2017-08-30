@@ -15,16 +15,16 @@ namespace Behavioral\Iterator;
  *
  * @package Behavioral\Iterator
  */
-interface InterfaceIterator
+interface IteratorInterface
 {
 
     /**
      * @return mixed
      */
-    public function hasNext();
+    public function hasNext(): bool;
 
     /**
      * @return mixed
      */
-    public function next();
+    public function next(): Item;
 }
