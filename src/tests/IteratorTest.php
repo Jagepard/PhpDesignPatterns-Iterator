@@ -23,7 +23,7 @@ class IteratorTest extends PHPUnit_Framework_TestCase
     public function testInstance(): void
     {
         $this->assertInstanceOf(\Behavioral\Iterator\Client::class, $this->getClient());
-        $this->assertInstanceOf(\Behavioral\Iterator\InterfaceAggregate::class, $this->getClient()->getAggregate());
+        $this->assertInstanceOf(\Behavioral\Iterator\AggregateInterface::class, $this->getClient()->getAggregate());
     }
 
     public function testAggregatesItems(): void
