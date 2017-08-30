@@ -43,7 +43,7 @@ class Client
 
     public function printAggregatesItems(): void
     {
-        $this->printIteratorItems($this->aggregate->createIterator());
+        $this->printIteratorItems($this->getAggregate()->createIterator());
     }
 
     /**
