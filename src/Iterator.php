@@ -15,7 +15,7 @@ namespace Behavioral\Iterator;
  *
  * @package Behavioral\Iterator
  */
-class Iterator implements InterfaceIterator
+class Iterator implements IteratorInterface
 {
 
     /**
