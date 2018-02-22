@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+namespace Behavioral\Iterator;
+
+require_once 'vendor/autoload.php';
+
+$client = new Client(new Bucket());
+
+$client->getBucket()->addItem(new Item('Колготки', 150, 'штопаные'));
+$client->getBucket()->addItem(new Item('Мясо', 250, 'тухлое'));
+$client->getBucket()->addItem(new Item('Батон', 40));
+
+$client->getAllGoods();
