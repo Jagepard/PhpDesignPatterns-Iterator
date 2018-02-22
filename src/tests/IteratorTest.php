@@ -17,20 +17,20 @@ class IteratorTest extends PHPUnit_Framework_TestCase
 
     protected function setUp(): void
     {
-        $this->client = new \Behavioral\Iterator\Client(new \Behavioral\Iterator\ConcreteAggregate());
+        $this->client = new \Behavioral\Iterator\Client(new \Behavioral\Iterator\Bucket());
     }
 
     public function testInstance(): void
     {
         $this->assertInstanceOf(\Behavioral\Iterator\Client::class, $this->getClient());
-        $this->assertInstanceOf(\Behavioral\Iterator\AggregateInterface::class, $this->getClient()->getAggregate());
+        $this->assertInstanceOf(\Behavioral\Iterator\Bucket::class, $this->getClient()->getBucket());
     }
 
     public function testAggregatesItems(): void
     {
         ob_start();
-        $this->getClient()->getAggregate()->addItem(new \Behavioral\Iterator\Item('Колготки', 150, 'штопаные'));
-        $this->getClient()->printAggregatesItems();
+        $this->getClient()->getBucket()->addItem(new \Behavioral\Iterator\Item('Колготки', 150, 'штопаные'));
+        $this->getClient()->getAllGoods();
         $item = ob_get_clean();
 
         $this->assertEquals($item, "Колготки 150 руб. штопаные\n");

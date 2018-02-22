@@ -19,40 +19,39 @@ class Client
 {
 
     /**
-     * @var AggregateInterface
+     * @var Bucket
      */
-    protected $aggregate;
+    protected $bucket;
 
     /**
      * Client constructor.
-     *
-     * @param AggregateInterface $aggregate
+     * @param Bucket $bucket
      */
-    public function __construct(AggregateInterface $aggregate)
+    public function __construct(Bucket $bucket)
     {
-        $this->aggregate = $aggregate;
+        $this->bucket = $bucket;
     }
 
     /**
-     * @return AggregateInterface
+     * @return Bucket
      */
-    public function getAggregate(): AggregateInterface
+    public function getBucket(): Bucket
     {
-        return $this->aggregate;
+        return $this->bucket;
     }
 
-    public function printAggregatesItems(): void
+    public function getAllGoods(): void
     {
-        $this->printIteratorItems($this->getAggregate()->createIterator());
+        $this->iterateItems(new Iterator($this->getBucket()));
     }
 
     /**
      * @param Iterator $iterator
      */
-    protected function printIteratorItems(Iterator $iterator): void
+    protected function iterateItems(Iterator $iterator): void
     {
-        while ($iterator->hasNext()) {
-            $item = $iterator->next();
+        while ($iterator->hasItem()) {
+            $item = $iterator->getItem();
             $item->printItem();
         }
     }

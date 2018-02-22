@@ -19,9 +19,9 @@ class Iterator implements IteratorInterface
 {
 
     /**
-     * @var array
+     * @var Bucket
      */
-    protected $items = [];
+    protected $bucket;
 
     /**
      * @var int
@@ -30,30 +30,19 @@ class Iterator implements IteratorInterface
 
     /**
      * Iterator constructor.
-     *
-     * @param array $items
+     * @param Bucket $bucket
      */
-    public function __construct(array $items)
+    public function __construct(Bucket $bucket)
     {
-        $this->items = $items;
+        $this->bucket = $bucket;
     }
 
     /**
-     * @return array
+     * @return Bucket
      */
-    public function getItems(): array
+    public function getBucket(): Bucket
     {
-        return $this->items;
-    }
-
-    /**
-     * @param int $item
-     *
-     * @return Item
-     */
-    public function getItem(int $item): Item
-    {
-        return $this->items[$item];
+        return $this->bucket;
     }
 
     /**
@@ -75,17 +64,17 @@ class Iterator implements IteratorInterface
     /**
      * @return bool
      */
-    public function hasNext(): bool
+    public function hasItem(): bool
     {
-        return ($this->getPosition() >= count($this->getItems()) || count($this->getItems()) == 0) ? false : true;
+        return isset($this->getBucket()->getItems()[$this->getPosition()]);
     }
 
     /**
      * @return Item
      */
-    public function next(): Item
+    public function getItem(): Item
     {
-        $item = $this->getItem($this->getPosition());
+        $item = $this->getBucket()->getItems()[$this->getPosition()];
         $this->setPosition($this->getPosition() + 1);
 
         return $item;
