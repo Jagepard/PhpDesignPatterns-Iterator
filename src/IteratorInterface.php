@@ -21,10 +21,10 @@ interface IteratorInterface
     /**
      * @return mixed
      */
-    public function hasNext(): bool;
+    public function hasItem(): bool;
 
     /**
      * @return mixed
      */
-    public function next(): Item;
+    public function getItem(): Item;
 }

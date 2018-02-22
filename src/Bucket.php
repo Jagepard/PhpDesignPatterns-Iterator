@@ -11,25 +11,16 @@ declare(strict_types = 1);
 namespace Behavioral\Iterator;
 
 /**
- * Class ConcreteAggregate
- *
+ * Class Bucket
  * @package Behavioral\Iterator
  */
-class ConcreteAggregate implements AggregateInterface
+class Bucket
 {
 
     /**
      * @var array
      */
     protected $items = [];
-
-    /**
-     * @return Iterator
-     */
-    public function createIterator(): Iterator
-    {
-        return new Iterator($this->getItems());
-    }
 
     /**
      * @return array
