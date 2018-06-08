@@ -1,18 +1,16 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /**
  * @author    : Korotkov Danila <dankorot@gmail.com>
- * @copyright Copyright (c) 2017, Korotkov Danila
- * @license   http://www.gnu.org/licenses/gpl.html GNU GPLv3.0
+ * @license   https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
 
 /**
  * Class Item
- *
  * @package Behavioral\Iterator
  */
 class Item
@@ -21,13 +19,11 @@ class Item
     /**
      * @var
      */
-    protected $price;
-
+    protected $name;
     /**
      * @var
      */
-    protected $name;
-
+    protected $price;
     /**
      * @var string
      */
@@ -35,7 +31,6 @@ class Item
 
     /**
      * Item constructor.
-     *
      * @param        $name
      * @param        $price
      * @param string $description
@@ -49,30 +44,6 @@ class Item
 
     public function printItem(): void
     {
-        print $this->getName() . ' ' . $this->getPrice() . ' руб. ' . $this->getDescription() . "\n";
-    }
-
-    /**
-     * @return int
-     */
-    public function getPrice(): int
-    {
-        return $this->price;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription(): string
-    {
-        return $this->description;
+        printf("%s %s руб. %s\n",  $this->name , $this->price , $this->description);
     }
 }

@@ -1,18 +1,16 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /**
  * @author    : Korotkov Danila <dankorot@gmail.com>
- * @copyright Copyright (c) 2017, Korotkov Danila
- * @license   http://www.gnu.org/licenses/gpl.html GNU GPLv3.0
+ * @license   https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
 
 /**
  * Class Iterator
- *
  * @package Behavioral\Iterator
  */
 class Iterator implements IteratorInterface
@@ -22,7 +20,6 @@ class Iterator implements IteratorInterface
      * @var Bucket
      */
     protected $bucket;
-
     /**
      * @var int
      */
@@ -38,45 +35,19 @@ class Iterator implements IteratorInterface
     }
 
     /**
-     * @return Bucket
-     */
-    public function getBucket(): Bucket
-    {
-        return $this->bucket;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPosition(): int
-    {
-        return $this->position;
-    }
-
-    /**
-     * @param int $position
-     */
-    public function setPosition(int $position)
-    {
-        $this->position = $position;
-    }
-
-    /**
      * @return bool
      */
     public function hasItem(): bool
     {
-        return isset($this->getBucket()->getItems()[$this->getPosition()]);
+        return isset($this->bucket->getItems()[$this->position]);
     }
 
-    /**
-     * @return Item
-     */
-    public function getItem(): Item
+    public function iterateItems(): void
     {
-        $item = $this->getBucket()->getItems()[$this->getPosition()];
-        $this->setPosition($this->getPosition() + 1);
-
-        return $item;
+        while ($this->hasItem()) {
+            $item = $this->bucket->getItems()[$this->position];
+            $this->position++;
+            $item->printItem();
+        }
     }
 }
