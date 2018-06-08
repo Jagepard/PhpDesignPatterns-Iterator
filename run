@@ -5,10 +5,12 @@ namespace Behavioral\Iterator;
 
 require_once 'vendor/autoload.php';
 
-$client = new Client(new Bucket());
+$bucket = new Bucket();
+$client = new Client($bucket);
 
 $client->getBucket()->addItem(new Item('Колготки', 150, 'штопаные'));
 $client->getBucket()->addItem(new Item('Мясо', 250, 'тухлое'));
 $client->getBucket()->addItem(new Item('Батон', 40));
 
-$client->getAllGoods();
+$employee = new Iterator($client->getBucket());
+$employee->iterateItems();

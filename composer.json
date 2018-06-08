@@ -3,7 +3,7 @@
     "description" : "PhpDesignPatterns",
     "type"        : "library",
     "keywords"    : [
-        "patterns",
+        "iterator",
         "design-patterns"
     ],
     "license"     : "MIT",
@@ -15,22 +15,23 @@
             "role"    : "Developer"
         }
     ],
-
     "support"     : {
         "email": "jagepard@yandex.ru",
         "skype": "jagepard.ru"
     },
-
+    "require-dev"      : {
+        "phpunit/phpunit": "^7"
+    },
     "autoload": {
         "psr-4": {
             "Behavioral\\Iterator\\":"src/"
         }
     },
-
-    "require": {
-        "php": ">=7.0"
+    "autoload-dev"     : {
+        "psr-4": {
+            "Behavioral\\Iterator\\Tests\\":"tests/"
+        }
     },
-
     "minimum-stability": "dev",
     "prefer-stable" : true
 }
