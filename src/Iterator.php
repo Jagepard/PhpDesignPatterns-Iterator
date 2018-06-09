@@ -34,20 +34,11 @@ class Iterator implements IteratorInterface
         $this->bucket = $bucket;
     }
 
-    /**
-     * @return bool
-     */
-    public function hasItem(): bool
-    {
-        return isset($this->bucket->getItems()[$this->position]);
-    }
-
     public function iterateItems(): void
     {
-        while ($this->hasItem()) {
-            $item = $this->bucket->getItems()[$this->position];
+        while (isset($this->bucket->getItems()[$this->position])) {
+            $this->bucket->getItems()[$this->position]->printItem();
             $this->position++;
-            $item->printItem();
         }
     }
 }
