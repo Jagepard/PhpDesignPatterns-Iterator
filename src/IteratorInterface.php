@@ -17,10 +17,5 @@ namespace Behavioral\Iterator;
 interface IteratorInterface
 {
 
-    /**
-     * @return mixed
-     */
-    public function hasItem(): bool;
-
     public function iterateItems(): void;
 }
