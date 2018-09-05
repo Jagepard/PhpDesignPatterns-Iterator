@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-498e7f.svg)](https://mit-license.org/)
 -----
 
-# Iterator [API](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/docs.md "Documentation API")
+# Iterator | [API](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/docs.md "Documentation API")
 Итератор
 
 ![Iterator](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/UML.png)
