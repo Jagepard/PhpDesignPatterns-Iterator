@@ -20,7 +20,7 @@ interface ClientInterface
     public function __construct(BucketInterface $bucket);
 
     /**
-     * @return Bucket
+     * @return BucketInterface
      */
     public function getBucket(): BucketInterface;
 }
