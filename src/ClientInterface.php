@@ -14,13 +14,13 @@ namespace Behavioral\Iterator;
 interface ClientInterface
 {
     /**
-     * Client constructor.
-     * @param Bucket $bucket
+     * ClientInterface constructor.
+     * @param BucketInterface $bucket
      */
-    public function __construct(Bucket $bucket);
+    public function __construct(BucketInterface $bucket);
 
     /**
      * @return Bucket
      */
-    public function getBucket(): Bucket;
+    public function getBucket(): BucketInterface;
 }
