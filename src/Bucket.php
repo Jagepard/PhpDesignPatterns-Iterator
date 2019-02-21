@@ -13,13 +13,12 @@ namespace Behavioral\Iterator;
  * Class Bucket
  * @package Behavioral\Iterator
  */
-class Bucket
+class Bucket implements BucketInterface
 {
-
     /**
      * @var array
      */
-    protected $items = [];
+    private $items = [];
 
     /**
      * @return array
@@ -30,9 +29,9 @@ class Bucket
     }
 
     /**
-     * @param Item $item
+     * @param ItemInterface $item
      */
-    public function addItem(Item $item)
+    public function addItem(ItemInterface $item): void
     {
         $this->items[] = $item;
     }
