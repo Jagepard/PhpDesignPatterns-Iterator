@@ -8,17 +8,19 @@
 namespace Behavioral\Iterator;
 
 /**
- * Interface InterfaceIterator
- *
+ * Interface ClientInterface
  * @package Behavioral\Iterator
  */
-interface IteratorInterface
+interface ClientInterface
 {
     /**
-     * Iterator constructor.
+     * ClientInterface constructor.
      * @param BucketInterface $bucket
      */
     public function __construct(BucketInterface $bucket);
 
-    public function iterateItems(): void;
+    /**
+     * @return BucketInterface
+     */
+    public function getBucket(): BucketInterface;
 }

@@ -13,6 +13,7 @@ use Behavioral\Iterator\Item;
 use Behavioral\Iterator\Client;
 use Behavioral\Iterator\Bucket;
 use Behavioral\Iterator\Iterator;
+use Behavioral\Iterator\ClientInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
@@ -21,11 +22,10 @@ use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
  */
 class IteratorTest extends PHPUnit_Framework_TestCase
 {
-
     /**
-     * @var Client
+     * @var ClientInterface
      */
-    protected $client;
+    private $client;
 
     protected function setUp(): void
     {
@@ -34,18 +34,26 @@ class IteratorTest extends PHPUnit_Framework_TestCase
 
     public function testInstance(): void
     {
-        $this->assertInstanceOf(Client::class, $this->client);
-        $this->assertInstanceOf(Bucket::class, $this->client->getBucket());
+        $this->assertInstanceOf(Client::class, $this->getClient());
+        $this->assertInstanceOf(Bucket::class, $this->getClient()->getBucket());
     }
 
     public function testAggregatesItems(): void
     {
         ob_start();
-        $this->client->getBucket()->addItem(new Item('Колготки', 150, 'штопаные'));
-        $employee = new Iterator($this->client->getBucket());
+        $this->getClient()->getBucket()->addItem(new Item('Колготки', 150, 'штопаные'));
+        $employee = new Iterator($this->getClient()->getBucket());
         $employee->iterateItems();
         $item = ob_get_clean();
 
         $this->assertEquals($item, "Колготки 150 руб. штопаные\n");
+    }
+
+    /**
+     * @return ClientInterface
+     */
+    public function getClient(): ClientInterface
+    {
+        return $this->client;
     }
 }

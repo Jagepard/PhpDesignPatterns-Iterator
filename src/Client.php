@@ -13,27 +13,26 @@ namespace Behavioral\Iterator;
  * Class Client
  * @package Behavioral\Iterator
  */
-class Client
+class Client implements ClientInterface
 {
-
     /**
      * @var Bucket
      */
-    protected $bucket;
+    private $bucket;
 
     /**
      * Client constructor.
-     * @param Bucket $bucket
+     * @param BucketInterface $bucket
      */
-    public function __construct(Bucket $bucket)
+    public function __construct(BucketInterface $bucket)
     {
         $this->bucket = $bucket;
     }
 
     /**
-     * @return Bucket
+     * @return BucketInterface
      */
-    public function getBucket(): Bucket
+    public function getBucket(): BucketInterface
     {
         return $this->bucket;
     }

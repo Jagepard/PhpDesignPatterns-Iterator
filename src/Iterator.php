@@ -15,21 +15,20 @@ namespace Behavioral\Iterator;
  */
 class Iterator implements IteratorInterface
 {
-
     /**
      * @var Bucket
      */
-    protected $bucket;
+    private $bucket;
     /**
      * @var int
      */
-    protected $position = 0;
+    private $position = 0;
 
     /**
      * Iterator constructor.
-     * @param Bucket $bucket
+     * @param BucketInterface $bucket
      */
-    public function __construct(Bucket $bucket)
+    public function __construct(BucketInterface $bucket)
     {
         $this->bucket = $bucket;
     }
