@@ -13,13 +13,12 @@ namespace Behavioral\Iterator;
  * Class Client
  * @package Behavioral\Iterator
  */
-class Client
+class Client implements ClientInterface
 {
-
     /**
      * @var Bucket
      */
-    protected $bucket;
+    private $bucket;
 
     /**
      * Client constructor.
