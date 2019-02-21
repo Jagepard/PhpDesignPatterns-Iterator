@@ -54,8 +54,8 @@
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\Bucket](#class-behavioraliteratorbucket)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Client constructor.</em> |
-| public | <strong>getBucket()</strong> : <em>[\Behavioral\Iterator\Bucket](#class-behavioraliteratorbucket)</em> |
+| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>ClientInterface constructor.</em> |
+| public | <strong>getBucket()</strong> : <em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> |
 
 <hr />
 
@@ -87,8 +87,8 @@
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\Bucket](#class-behavioraliteratorbucket)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Client constructor.</em> |
-| public | <strong>getBucket()</strong> : <em>[\Behavioral\Iterator\Bucket](#class-behavioraliteratorbucket)</em> |
+| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Client constructor.</em> |
+| public | <strong>getBucket()</strong> : <em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> |
 
 *This class implements [\Behavioral\Iterator\ClientInterface](#interface-behavioraliteratorclientinterface)*
 
