@@ -6,6 +6,8 @@
 -----
 
 # Iterator | [API](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/docs.md "Documentation API")
+```php run``` Запустить исполнение шаблона в терминале
+
 Итератор
 
 ![Iterator](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/UML.png)
