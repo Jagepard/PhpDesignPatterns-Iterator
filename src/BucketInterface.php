@@ -7,10 +7,6 @@
 
 namespace Behavioral\Iterator;
 
-/**
- * Interface BucketInterface
- * @package Behavioral\Iterator
- */
 interface BucketInterface
 {
     /**

@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Behavioral\Iterator;
 
-/**
- * Class Client
- * @package Behavioral\Iterator
- */
 class Client implements ClientInterface
 {
     /**

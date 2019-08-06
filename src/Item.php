@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Behavioral\Iterator;
 
-/**
- * Class Item
- * @package Behavioral\Iterator
- */
 class Item implements ItemInterface
 {
     /**
