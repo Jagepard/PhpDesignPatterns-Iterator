@@ -13,4 +13,9 @@ $client->getBucket()->addItem(new Item('Мясо', 250, 'тухлое'));
 $client->getBucket()->addItem(new Item('Батон', 40));
 
 $employee = new Iterator($client->getBucket());
-$employee->iterateItems();
+
+try {
+    $employee->iterateItems();
+} catch (\Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+}

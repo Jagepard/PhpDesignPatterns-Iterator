@@ -7,11 +7,6 @@
 
 namespace Behavioral\Iterator;
 
-/**
- * Interface InterfaceIterator
- *
- * @package Behavioral\Iterator
- */
 interface IteratorInterface
 {
     /**

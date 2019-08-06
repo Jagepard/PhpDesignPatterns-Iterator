@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Behavioral\Iterator;
 
-/**
- * Class Iterator
- * @package Behavioral\Iterator
- */
 class Iterator implements IteratorInterface
 {
     /**
@@ -35,6 +31,10 @@ class Iterator implements IteratorInterface
 
     public function iterateItems(): void
     {
+        if (count($this->bucket->getItems()) === 0) {
+            throw new \InvalidArgumentException('Bucket is empty');
+        }
+
         while (isset($this->bucket->getItems()[$this->position])) {
             $this->bucket->getItems()[$this->position]->printItem();
             $this->position++;

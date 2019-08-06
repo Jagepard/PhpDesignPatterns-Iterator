@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Behavioral\Iterator;
 
-/**
- * Class Bucket
- * @package Behavioral\Iterator
- */
 class Bucket implements BucketInterface
 {
     /**
