@@ -16,10 +16,6 @@ use Behavioral\Iterator\Iterator;
 use Behavioral\Iterator\ClientInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-/**
- * Class IteratorTest
- * @package Behavioral\Iterator\Tests
- */
 class IteratorTest extends PHPUnit_Framework_TestCase
 {
     /**
