@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
@@ -11,9 +11,9 @@ interface ItemInterface
 {
     /**
      * Item constructor.
-     * @param string $name
-     * @param int    $price
-     * @param string $description
+     * @param  string  $name
+     * @param  int  $price
+     * @param  string  $description
      */
     public function __construct(string $name, int $price, string $description = '');
 
