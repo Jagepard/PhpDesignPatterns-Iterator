@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
@@ -12,23 +12,22 @@ namespace Behavioral\Iterator;
 class Client implements ClientInterface
 {
     /**
-     * @var Bucket
+     * @var array
      */
-    private $bucket;
+    private $bucket = [];
 
     /**
-     * Client constructor.
-     * @param BucketInterface $bucket
+     * @param ItemInterface $item
      */
-    public function __construct(BucketInterface $bucket)
+    public function addItemToTheBucket(ItemInterface $item): void
     {
-        $this->bucket = $bucket;
+        $this->bucket[] = $item;
     }
 
     /**
-     * @return BucketInterface
+     * @return array
      */
-    public function getBucket(): BucketInterface
+    public function getBucket(): array
     {
         return $this->bucket;
     }
