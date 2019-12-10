@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
@@ -10,13 +10,7 @@ namespace Behavioral\Iterator;
 interface ClientInterface
 {
     /**
-     * ClientInterface constructor.
-     * @param BucketInterface $bucket
+     * @return array
      */
-    public function __construct(BucketInterface $bucket);
-
-    /**
-     * @return BucketInterface
-     */
-    public function getBucket(): BucketInterface;
+    public function getBucket(): array;
 }
