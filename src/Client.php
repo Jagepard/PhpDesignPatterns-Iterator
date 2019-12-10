@@ -17,7 +17,7 @@ class Client implements ClientInterface
     private $bucket = [];
 
     /**
-     * @param ItemInterface $item
+     * @param  ItemInterface  $item
      */
     public function addItemToTheBucket(ItemInterface $item): void
     {
