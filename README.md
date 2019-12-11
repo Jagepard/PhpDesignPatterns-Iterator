@@ -8,6 +8,4 @@
 # Iterator | [API](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/docs.md "Documentation API")
 ```php run``` execute in terminal
 
-Итератор
-
 ![Iterator](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/UML.png)
