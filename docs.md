@@ -4,20 +4,16 @@
 - [\Behavioral\Iterator\Item](#class-behavioraliteratoritem)
 - [\Behavioral\Iterator\IteratorInterface (interface)](#interface-behavioraliteratoriteratorinterface)
 - [\Behavioral\Iterator\ClientInterface (interface)](#interface-behavioraliteratorclientinterface)
-- [\Behavioral\Iterator\BucketInterface (interface)](#interface-behavioraliteratorbucketinterface)
 - [\Behavioral\Iterator\ItemInterface (interface)](#interface-behavioraliteratoriteminterface)
 - [\Behavioral\Iterator\Client](#class-behavioraliteratorclient)
-- [\Behavioral\Iterator\Bucket](#class-behavioraliteratorbucket)
 
 <hr />
 
 ### Class: \Behavioral\Iterator\Iterator
 
-> Class Iterator
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Iterator constructor.</em> |
+| public | <strong>__construct(</strong><em>array</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Iterator constructor.</em> |
 | public | <strong>iterateItems()</strong> : <em>void</em> |
 
 *This class implements [\Behavioral\Iterator\IteratorInterface](#interface-behavioraliteratoriteratorinterface)*
@@ -25,8 +21,6 @@
 <hr />
 
 ### Class: \Behavioral\Iterator\Item
-
-> Class Item
 
 | Visibility | Function |
 |:-----------|:---------|
@@ -39,40 +33,21 @@
 
 ### Interface: \Behavioral\Iterator\IteratorInterface
 
-> Interface InterfaceIterator
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Iterator constructor.</em> |
 | public | <strong>iterateItems()</strong> : <em>void</em> |
 
 <hr />
 
 ### Interface: \Behavioral\Iterator\ClientInterface
 
-> Interface ClientInterface
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>ClientInterface constructor.</em> |
-| public | <strong>getBucket()</strong> : <em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> |
-
-<hr />
-
-### Interface: \Behavioral\Iterator\BucketInterface
-
-> Interface BucketInterface
-
-| Visibility | Function |
-|:-----------|:---------|
-| public | <strong>addItem(</strong><em>[\Behavioral\Iterator\ItemInterface](#interface-behavioraliteratoriteminterface)</em> <strong>$item</strong>)</strong> : <em>void</em> |
-| public | <strong>getItems()</strong> : <em>array</em> |
+| public | <strong>getBucket()</strong> : <em>array</em> |
 
 <hr />
 
 ### Interface: \Behavioral\Iterator\ItemInterface
-
-> Interface ItemInterface
 
 | Visibility | Function |
 |:-----------|:---------|
@@ -83,25 +58,10 @@
 
 ### Class: \Behavioral\Iterator\Client
 
-> Class Client
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> <strong>$bucket</strong>)</strong> : <em>void</em><br /><em>Client constructor.</em> |
-| public | <strong>getBucket()</strong> : <em>[\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)</em> |
+| public | <strong>addItemToTheBucket(</strong><em>[\Behavioral\Iterator\ItemInterface](#interface-behavioraliteratoriteminterface)</em> <strong>$item</strong>)</strong> : <em>void</em> |
+| public | <strong>getBucket()</strong> : <em>array</em> |
 
 *This class implements [\Behavioral\Iterator\ClientInterface](#interface-behavioraliteratorclientinterface)*
-
-<hr />
-
-### Class: \Behavioral\Iterator\Bucket
-
-> Class Bucket
-
-| Visibility | Function |
-|:-----------|:---------|
-| public | <strong>addItem(</strong><em>[\Behavioral\Iterator\ItemInterface](#interface-behavioraliteratoriteminterface)</em> <strong>$item</strong>)</strong> : <em>void</em> |
-| public | <strong>getItems()</strong> : <em>array</em> |
-
-*This class implements [\Behavioral\Iterator\BucketInterface](#interface-behavioraliteratorbucketinterface)*
 

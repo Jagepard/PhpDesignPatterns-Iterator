@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
@@ -12,32 +12,27 @@ namespace Behavioral\Iterator;
 class Iterator implements IteratorInterface
 {
     /**
-     * @var Bucket
+     * @var array
      */
     private $bucket;
-    /**
-     * @var int
-     */
-    private $position = 0;
 
     /**
      * Iterator constructor.
-     * @param BucketInterface $bucket
+     * @param  array  $bucket
      */
-    public function __construct(BucketInterface $bucket)
+    public function __construct(array $bucket)
     {
         $this->bucket = $bucket;
     }
 
     public function iterateItems(): void
     {
-        if (count($this->bucket->getItems()) === 0) {
+        if (count($this->bucket) === 0) {
             throw new \InvalidArgumentException('Bucket is empty');
         }
 
-        while (isset($this->bucket->getItems()[$this->position])) {
-            $this->bucket->getItems()[$this->position]->printItem();
-            $this->position++;
+        for ($i = 0; isset($this->bucket[$i]); $i++) {
+            $this->bucket[$i]->printItem();
         }
     }
 }

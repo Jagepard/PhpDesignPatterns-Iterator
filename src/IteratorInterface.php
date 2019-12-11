@@ -1,19 +1,13 @@
 <?php
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Behavioral\Iterator;
 
 interface IteratorInterface
 {
-    /**
-     * Iterator constructor.
-     * @param BucketInterface $bucket
-     */
-    public function __construct(BucketInterface $bucket);
-
     public function iterateItems(): void;
 }
