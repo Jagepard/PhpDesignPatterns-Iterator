@@ -9,18 +9,17 @@ declare(strict_types=1);
 
 namespace Behavioral\Iterator\Tests;
 
-use Behavioral\Iterator\Item;
-use Behavioral\Iterator\Client;
-use Behavioral\Iterator\Iterator;
-use Behavioral\Iterator\ClientInterface;
+use Behavioral\Iterator\{
+    Item,
+    Client,
+    Iterator,
+    ClientInterface
+};
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 class IteratorTest extends PHPUnit_Framework_TestCase
 {
-    /**
-     * @var ClientInterface
-     */
-    private $client;
+    private ClientInterface $client;
 
     protected function setUp(): void
     {

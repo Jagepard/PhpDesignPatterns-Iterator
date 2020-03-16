@@ -11,10 +11,7 @@ namespace Behavioral\Iterator;
 
 class Client implements ClientInterface
 {
-    /**
-     * @var array
-     */
-    private $bucket = [];
+    private array $bucket = [];
 
     /**
      * @param  ItemInterface  $item

@@ -11,10 +11,7 @@ namespace Behavioral\Iterator;
 
 class Iterator implements IteratorInterface
 {
-    /**
-     * @var array
-     */
-    private $bucket;
+    private array $bucket;
 
     /**
      * Iterator constructor.
