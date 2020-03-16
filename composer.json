@@ -9,7 +9,7 @@
     "license"     : "MIT",
     "authors"     : [
         {
-            "name"    : "Danila Korotkov (Jagepard)",
+            "name"    : "Jagepard",
             "email"   : "jagepard@yandex.ru",
             "homepage": "https://jagepard.ru",
             "role"    : "Developer"
@@ -18,6 +18,9 @@
     "support"     : {
         "email": "jagepard@yandex.ru",
         "skype": "jagepard.ru"
+    },
+    "require": {
+        "php": ">=7.4"
     },
     "require-dev"      : {
         "phpunit/phpunit": "^7"

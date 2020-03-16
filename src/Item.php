@@ -11,18 +11,9 @@ namespace Behavioral\Iterator;
 
 class Item implements ItemInterface
 {
-    /**
-     * @var
-     */
-    private $name;
-    /**
-     * @var
-     */
-    private $price;
-    /**
-     * @var string
-     */
-    private $description;
+    private string $name;
+    private int    $price;
+    private string $description;
 
     /**
      * Item constructor.
@@ -32,8 +23,8 @@ class Item implements ItemInterface
      */
     public function __construct(string $name, int $price, string $description = '')
     {
-        $this->name = $name;
-        $this->price = $price;
+        $this->name        = $name;
+        $this->price       = $price;
         $this->description = $description;
     }
 
