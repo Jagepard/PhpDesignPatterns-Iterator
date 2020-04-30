@@ -21,7 +21,7 @@ class Item implements ItemInterface
      * @param  int  $price
      * @param  string  $description
      */
-    public function __construct(string $name, int $price, string $description = '')
+    public function __construct(string $name, int $price, string $description = "")
     {
         $this->name        = $name;
         $this->price       = $price;
@@ -30,6 +30,6 @@ class Item implements ItemInterface
 
     public function printItem(): void
     {
-        printf("%s %s руб. %s\n", $this->name, $this->price, $this->description);
+        printf("%s %s %s\n", $this->name, $this->price, $this->description);
     }
 }

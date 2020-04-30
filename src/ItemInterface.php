@@ -15,7 +15,7 @@ interface ItemInterface
      * @param  int  $price
      * @param  string  $description
      */
-    public function __construct(string $name, int $price, string $description = '');
+    public function __construct(string $name, int $price, string $description = "");
 
     public function printItem(): void;
 }
