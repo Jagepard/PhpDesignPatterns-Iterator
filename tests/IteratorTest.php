@@ -29,11 +29,11 @@ class IteratorTest extends PHPUnit_Framework_TestCase
     public function testAggregatesItems(): void
     {
         ob_start();
-        $this->client->addItemToTheBucket(new Item('Колготки', 150, 'штопаные'));
+        $this->client->addItemToTheBucket(new Item("Tights", 150, "darned"));
         $employee = new Iterator($this->client->getBucket());
         $employee->iterateItems();
         $item = ob_get_clean();
 
-        $this->assertEquals($item, "Колготки 150 руб. штопаные\n");
+        $this->assertEquals("Tights 150 darned\n", $item);
     }
 }

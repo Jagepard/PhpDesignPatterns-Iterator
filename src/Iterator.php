@@ -25,7 +25,7 @@ class Iterator implements IteratorInterface
     public function iterateItems(): void
     {
         if (count($this->bucket) === 0) {
-            throw new \InvalidArgumentException('Bucket is empty');
+            throw new \InvalidArgumentException("Bucket is empty");
         }
 
         for ($i = 0; isset($this->bucket[$i]); $i++) {
