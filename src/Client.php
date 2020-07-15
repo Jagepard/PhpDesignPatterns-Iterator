@@ -11,21 +11,26 @@ namespace Behavioral\Iterator;
 
 class Client implements ClientInterface
 {
-    private array $bucket = [];
+    private Basket $basket;
+
+    public function takeABasket(Basket $bucket)
+    {
+        $this->basket = $bucket;
+    }
 
     /**
-     * @param  ItemInterface  $item
+     * @param ItemInterface $item
      */
-    public function addItemToTheBucket(ItemInterface $item): void
+    public function addItemToTheBasket(ItemInterface $item): void
     {
-        $this->bucket[] = $item;
+        $this->basket->addItem($item);
     }
 
     /**
      * @return array
      */
-    public function getBucket(): array
+    public function getGoodsFromTheBasket(): array
     {
-        return $this->bucket;
+        return $this->basket->getGoods();
     }
 }

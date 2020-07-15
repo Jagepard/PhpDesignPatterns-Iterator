@@ -7,10 +7,15 @@
 
 namespace Behavioral\Iterator;
 
-interface ClientInterface
+interface BasketInterface
 {
+    /**
+     * @param ItemInterface $item
+     */
+    public function addItem(ItemInterface $item): void;
+
     /**
      * @return array
      */
-    public function getGoodsFromTheBasket(): array;
+    public function getGoods(): array;
 }

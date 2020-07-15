@@ -9,5 +9,5 @@ namespace Behavioral\Iterator;
 
 interface IteratorInterface
 {
-    public function iterateItems(): void;
+    public function iterateItems(array $goods): void;
 }

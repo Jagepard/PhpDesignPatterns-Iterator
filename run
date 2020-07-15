@@ -5,16 +5,16 @@ namespace Behavioral\Iterator;
 
 require_once "vendor/autoload.php";
 
-$client = new Client();
+$employee = new Employee();
+$client   = new Client();
 
-$client->addItemToTheBucket(new Item("Tights", 150, "darned"));
-$client->addItemToTheBucket(new Item("Meat", 250, "rotten"));
-$client->addItemToTheBucket(new Item("Bread", 40));
-
-$employee = new Iterator($client->getBucket());
+$client->takeABasket(new Basket());
+$client->addItemToTheBasket(new Item("Tights", 150, "darned"));
+$client->addItemToTheBasket(new Item("Meat", 250, "rotten"));
+$client->addItemToTheBasket(new Item("Bread", 40));
 
 try {
-    $employee->iterateItems();
+    $employee->iterateItems($client->getGoodsFromTheBasket());
 } catch (\Exception $e) {
     echo "Caught exception: {$e->getMessage()}\n";
 }
