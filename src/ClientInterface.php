@@ -12,5 +12,5 @@ interface ClientInterface
     /**
      * @return array
      */
-    public function getBucket(): array;
+    public function getGoodsFromTheBasket(): array;
 }
