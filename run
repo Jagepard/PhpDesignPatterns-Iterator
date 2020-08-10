@@ -8,10 +8,10 @@ require_once "vendor/autoload.php";
 $employee = new Employee();
 $client   = new Client();
 
-$client->takeABasket(new Basket());
-$client->addItemToTheBasket(new Item("Tights", 150, "darned"));
-$client->addItemToTheBasket(new Item("Meat", 250, "rotten"));
-$client->addItemToTheBasket(new Item("Bread", 40));
+$client->takeBasket(new Basket());
+$client->addToTheBasket(new Item("Tights", 150, "darned"));
+$client->addToTheBasket(new Item("Meat", 250, "rotten"));
+$client->addToTheBasket(new Item("Bread", 40));
 
 try {
     $employee->iterateItems($client->getGoodsFromTheBasket());

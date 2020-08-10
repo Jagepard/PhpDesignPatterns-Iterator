@@ -19,13 +19,13 @@ class IteratorTest extends PHPUnit_Framework_TestCase
     protected function setUp(): void
     {
         $this->client = new Client();
-        $this->client->takeABasket(new Basket());
+        $this->client->takeBasket(new Basket());
     }
 
     public function testAggregatesItems(): void
     {
         ob_start();
-        $this->client->addItemToTheBasket(new Item("Tights", 150, "darned"));
+        $this->client->addToTheBasket(new Item("Tights", 150, "darned"));
         $employee = new Employee();
         $employee->iterateItems($this->client->getGoodsFromTheBasket());
         $item = ob_get_clean();
