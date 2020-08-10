@@ -13,7 +13,7 @@ class Client implements ClientInterface
 {
     private Basket $basket;
 
-    public function takeABasket(Basket $bucket)
+    public function takeBasket(Basket $bucket)
     {
         $this->basket = $bucket;
     }
@@ -21,7 +21,7 @@ class Client implements ClientInterface
     /**
      * @param ItemInterface $item
      */
-    public function addItemToTheBasket(ItemInterface $item): void
+    public function addToTheBasket(ItemInterface $item): void
     {
         $this->basket->addItem($item);
     }
