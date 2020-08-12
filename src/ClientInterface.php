@@ -9,8 +9,5 @@ namespace Behavioral\Iterator;
 
 interface ClientInterface
 {
-    /**
-     * @return array
-     */
     public function getGoodsFromTheBasket(): array;
 }
