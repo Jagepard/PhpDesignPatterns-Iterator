@@ -15,12 +15,6 @@ class Item implements ItemInterface
     private int    $price;
     private string $description;
 
-    /**
-     * Item constructor.
-     * @param  string  $name
-     * @param  int  $price
-     * @param  string  $description
-     */
     public function __construct(string $name, int $price, string $description = "")
     {
         $this->name        = $name;

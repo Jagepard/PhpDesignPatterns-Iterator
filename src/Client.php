@@ -18,17 +18,11 @@ class Client implements ClientInterface
         $this->basket = $bucket;
     }
 
-    /**
-     * @param ItemInterface $item
-     */
     public function addToTheBasket(ItemInterface $item): void
     {
         $this->basket->addItem($item);
     }
 
-    /**
-     * @return array
-     */
     public function getGoodsFromTheBasket(): array
     {
         return $this->basket->getGoods();

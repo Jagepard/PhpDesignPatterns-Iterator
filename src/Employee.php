@@ -11,9 +11,6 @@ namespace Behavioral\Iterator;
 
 class Employee implements IteratorInterface
 {
-    /**
-     * @param array $goods
-     */
     public function iterateItems(array $goods): void
     {
         if (count($goods) === 0) {
