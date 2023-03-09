@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-498e7f.svg)](https://mit-license.org/)
 -----
 
-# Iterator
+# Iterator | [API](https://github.com/Jagepard/PhpDesignPatterns-Iterator/blob/master/api.md)
 ```php main.php``` execute in terminal
 
 ## Result:

@@ -11,6 +11,14 @@ namespace Behavioral\Iterator;
 
 class Employee implements IteratorInterface
 {
+    /**
+     * Iterates through cart items sequentially
+     * ----------------------------------------
+     * Последовательно обходит элементы корзины 
+     * 
+     * @param  array $goods
+     * @return void
+     */
     public function iterateItems(array $goods): void
     {
         if (count($goods) === 0) {

@@ -9,6 +9,14 @@ namespace Behavioral\Iterator;
 
 interface BasketInterface
 {
+    /**
+     * @param  ItemInterface $item
+     * @return void
+     */
     public function addItem(ItemInterface $item): void;
+
+    /**
+     * @return array
+     */
     public function getGoods(): array;
 }
