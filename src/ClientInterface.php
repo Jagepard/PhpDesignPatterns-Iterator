@@ -1,16 +1,12 @@
 <?php
 
-/**
- * @author  : Jagepard <jagepard@yandex.ru>
- * @license https://mit-license.org/ MIT
- */
+declare(strict_types=1);
 
 namespace Behavioral\Iterator;
 
 interface ClientInterface
 {
-    /**
-     * @return array
-     */
-    public function getGoodsFromTheBasket(): array;
+    public function takeBasket(Basket $basket): void;
+    public function addToTheBasket(Item $item): void;
+    public function getBasket(): Basket;
 }

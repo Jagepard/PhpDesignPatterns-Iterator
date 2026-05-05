@@ -2,44 +2,24 @@
 
 declare(strict_types=1);
 
-/**
- * @author  : Jagepard <jagepard@yandex.ru>
- * @license https://mit-license.org/ MIT
- */
-
 namespace Behavioral\Iterator;
 
-class Item implements ItemInterface
+final class Item
 {
-    private string $name;
-    private int    $price;
-    private string $description;
+    public function __construct(private string $name, private int $price, private string $description = ""){}
 
-    /**
-     * Sets the name, price and description of the product
-     * ---------------------------------------------------
-     * Устанавливает наименование, цену и описание товара
-     *
-     * @param  string  $name
-     * @param  integer $price
-     * @param  string  $description
-     */
-    public function __construct(string $name, int $price, string $description = "")
+    public function getName(): string
     {
-        $this->name        = $name;
-        $this->price       = $price;
-        $this->description = $description;
+        return $this->name;
     }
 
-    /**
-     * Displays product information
-     * ----------------------------
-     * Выводит информацию о товаре
-     *
-     * @return void
-     */
-    public function printItem(): void
+    public function getPrice(): int
     {
-        printf("%s %s %s\n", $this->name, $this->price, $this->description);
+        return $this->price;
+    }
+
+    public function getDescription(): string
+    {
+        return $this->description;
     }
 }

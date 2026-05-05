@@ -27,7 +27,7 @@ class IteratorTest extends PHPUnit_Framework_TestCase
         ob_start();
         $this->client->addToTheBasket(new Item("Tights", 150, "darned"));
         $employee = new Employee();
-        $employee->iterateItems($this->client->getGoodsFromTheBasket());
+        $employee->iterateItems($this->client->getBasket());
         $item = ob_get_clean();
 
         $this->assertEquals("Tights 150 darned\n", $item);

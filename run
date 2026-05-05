@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 namespace Behavioral\Iterator;
@@ -13,7 +14,7 @@ $client->addToTheBasket(new Item("Meat", 250, "rotten"));
 $client->addToTheBasket(new Item("Bread", 40));
 
 try {
-    $employee->iterateItems($client->getGoodsFromTheBasket());
+    $employee->iterateItems($client->getBasket());
 } catch (\Exception $e) {
     echo "Caught exception: {$e->getMessage()}\n";
 }
