@@ -2,31 +2,23 @@
 
 declare(strict_types=1);
 
-/**
- * @author  : Jagepard <jagepard@yandex.ru>
- * @license https://mit-license.org/ MIT
- */
-
 namespace Behavioral\Iterator;
 
-class Employee implements IteratorInterface
+/**
+ * Сотрудник, обрабатывающий товары из любой коллекции,
+ * реализующей \Traversable (паттерн Iterator).
+ */
+final class Employee implements EmployeeInterface
 {
     /**
-     * Iterates through cart items sequentially
-     * ----------------------------------------
-     * Последовательно обходит элементы корзины 
-     * 
-     * @param  array $goods
-     * @return void
+     * @param \Traversable<Item> $basket
      */
-    public function iterateItems(array $goods): void
+    public function iterateItems(\Traversable $basket): void
     {
-        if (count($goods) === 0) {
-            throw new \InvalidArgumentException("Basket is empty");
-        }
-
-        for ($i = 0; isset($goods[$i]); $i++) {
-            $goods[$i]->printItem();
+        // PHP автоматически вызывает getIterator() у объектов, реализующих \IteratorAggregate
+        foreach ($basket as $item) {
+            echo "{$item->getName()} {$item->getPrice()}" . 
+                 ($item->getDescription() ? " {$item->getDescription()}\n" : "\n");
         }
     }
 }

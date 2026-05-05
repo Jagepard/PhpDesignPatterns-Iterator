@@ -4,32 +4,22 @@ declare(strict_types=1);
 
 namespace Behavioral\Iterator;
 
-class Basket implements BasketInterface
+/**
+ * Коллекция товаров. Реализует Iterator через \IteratorAggregate,
+ * чтобы скрыть внутреннюю структуру массива и позволить обход через foreach.
+ */
+final class Basket implements \IteratorAggregate
 {
-    private array $goods;
+    private array $goods = [];
 
-    /**
-     * Adds an item to the cart
-     * -------------------------
-     * Добавляет товар в корзину
-     *
-     * @param  ItemInterface $item
-     * @return void
-     */
-    public function addItem(ItemInterface $item): void
+    public function add(Item $item): void
     {
         $this->goods[] = $item;
     }
 
-    /**
-     * Gets all items from the cart
-     * ------------------------------
-     * Получает все товары из корзины
-     *
-     * @return array
-     */
-    public function getGoods(): array
+    /** @return \Traversable<Item> */
+    public function getIterator(): \Traversable
     {
-        return $this->goods;
+        return new \ArrayIterator($this->goods);
     }
 }
